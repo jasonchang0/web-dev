@@ -12,7 +12,7 @@
     <!-- <style> 
         /* Collectively called the CSS rule */
     </style> -->
-    
+
     <!-- The meta elements -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +29,11 @@
 </head>
 
 <body>
-    <h1><em>The Test Web Site</em> &#8482; &copy;</h1>
-    <p><em class="px">Welcome to the Test Web Site. </em></p>
+    <!-- This is inline style -->
+    <!-- <h1 style="color:black;font-size: 40px;"><em >The Test Web Site</em> &#8482; &copy;</h1> -->
+
+    <h1 id="center_text"><em>The Test Web Site</em> &#8482; &copy;</h1>
+    <p id="center_text"><em class="px">Welcome to the Test Web Site. </em></p>
 
     <br>
 
@@ -39,7 +42,7 @@
     <p>Test-Driven Development (TDD) is a programming method where the programmer writes the tests for a function
         BEFORE the actual function is written.</p>
 
-    <ul>
+    <ul class="space light_background indent_left">
         <!-- Creating links within the same web page -->
         <li> <a href="#Steps"> Steps of TDD Approach</a></li>
         <li><a href="#Myth"> Myths and Misconceptions</a></li>
@@ -51,7 +54,7 @@
     <h2>Test-Driven Development (TDD) Flow Chart</h2>
     <p>
         <!-- Adding an image to a web page -->
-        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486">
+        <img id="center_image" src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486">
     </p>
     <br>
     <br>
@@ -66,11 +69,12 @@
         <li> Repeat this cycle.</li>
     </ul> -->
 
-    <ol><a name="Steps"></a><strong>Steps</strong> <br>
+    <a name="Steps"></a><strong>Steps</strong> <br>
+    <ol class="space light_background indent_left">
         <li> Think &amp; write test cases. </li>
-        <li> Red &nbsp; – &nbsp; Failure of test case. </li>
-        <li> Green &nbsp; – &nbsp; Code and get the new test case pass.</li>
-        <li> Green &nbsp; – &nbsp; Ensure all old test cases also pass.</li>
+        <li style="color: red;"> Red &nbsp; – &nbsp; Failure of test case. </li>
+        <li style="color: green;"> Green &nbsp; – &nbsp; Code and get the new test case pass.</li>
+        <li style="color: green;"> Green &nbsp; – &nbsp; Ensure all old test cases also pass.</li>
         <li> Refactor the code to clean it.</li>
         <li> Repeat this cycle.</li>
     </ol>
@@ -80,7 +84,12 @@
     <br>
 
     <!-- Creating a table -->
-    <table><a name="Myth"></a><strong>Myths and Misconceptions</strong> <br>
+    <table class="space light_background indent_right"><a name="Myth"></a><strong>Myths and Misconceptions</strong>
+        <img class="float_right" draggable="true" , src="../data/programming.jpg">
+
+        <br>
+        <br>
+
         <tr>
             <th class="underline">Myth</th>
             <th class="underline">Reality</th>
@@ -101,14 +110,15 @@
         <tr>
             <a name="m3"></a>
             <td>You only need to unit test &nbsp;&nbsp;</td>
-            <td>For all but the simplest systems this is completely false. The agile community is very clear about the
+            <td>For all but the simplest systems this is completely false. The agile community is very clear about
+                the
                 need for a host of other testing techniques. </td>
         </tr>
 
         <tr>
             <a name="m4"></a>
             <td>TDD is sufficient for testing &nbsp;&nbsp;</td>
-            <td>TDD, at the unit/developer test as well as at the customer test level, is only part of your overall
+            <td>At the unit/developer test as well as at the customer test level, TDD is only part of your overall
                 testing efforts.</td>
         </tr>
 
@@ -134,15 +144,19 @@
     <p> <a name="Debate"></a><strong> Jim Coplien and Bob Martin Debate TDD</strong>
         <br>
 
-        <blockquote class="px">
+        <blockquote class="px space">
             James O. Coplien &nbsp; - &nbsp; Vloeberghs Leerstoel (Vloeberghs Chair) at Vrije Universiteit Brussel
             <br>
             Robert Cecil Martin &nbsp; - &nbsp; American software engineer and author of the Agile Manifesto
         </blockquote>
 
-        Video (mp4): <br>
+        <center>
+            <blockquote class="center">
+                Video (mp4): <br>
+            </blockquote>
+        </center>
 
-        <video controls="videocontrols" width="640" height="480" draggable="true">
+        <video id="center_video_audio" controls="videocontrols" width="640" height="480" draggable="true">
             <!-- Three standard formats for web browsers are .mp4/.webm/.ogg -->
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp4" />
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.webm" />
@@ -152,8 +166,13 @@
         <br>
         <br>
 
-        Audio (mp3): <br>
-        <audio controls="audiocontrols" draggable="true"><a name="Debate"></a>
+        <center>
+            <blockquote>
+                Audio (mp3): <br>
+            </blockquote>
+        </center>
+
+        <audio id="center_video_audio" controls="audiocontrols" draggable="true"><a name="Debate"></a>
             <!-- Three standard formats for web browsers are .mp3/.wav/.ogg -->
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp3" />
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.wav" />
@@ -165,7 +184,7 @@
     <br>
     <br>
 
-    <form action="" method="">
+    <form class="light_background" action="" method="">
         <fieldset>
             <!-- Fieldbox and legend elements -->
             <legend> <Strong class="px">Please share your experience with us: &nbsp;</Strong> </legend>
@@ -203,9 +222,10 @@
             <br>
 
             <!-- NUmber input box -->
-            How many myths did you agree with&#63; <br>
+            How many myths did you agree with&#63;
             <input type="number" min="1" max="5">
 
+            <br>
             <br>
 
             <!-- Drop-down list -->
@@ -224,11 +244,13 @@
             </select>
 
             <br>
+            <br>
 
             <!-- Date and number box -->
             Enter the day of submission:
             <input type="date" name="day">
 
+            <br>
             <br>
 
             <!-- Multi-line text box -->
@@ -237,6 +259,7 @@
             <textarea rows="10" cols="80"></textarea>
 
             <br>
+
             <input type="submit" value="Submit">
 
         </fieldset>
@@ -260,6 +283,7 @@
 </html>
 
 <!-- // HTML 4.01 Strict, HTML 4.01 Transitional, XHTML 1.0 Strict -->
+
 
 
 

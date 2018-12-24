@@ -2,25 +2,111 @@
 
 body {
     /* Inheritance and overriding */
-    font-size: 18px;
-    font-family: Verdana, Geneva, Arial, Arial Black;
-    font-weight: bold
+    font-size: 16px;
+    font-family: sans-serif, Verdana, Geneva, Arial, Arial Black;
+    font-weight: bold;
+    color: snow;
+    /* background-color: aliceblue; */
+    /* background-color: rgb(78, 42, 132); */
+    /* Background image property */
+    background-image: url(../data/rain_background.gif);
 }
 
-h1, h2, strong {
+h1 {
     /* CSS property goes here */
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+    /* font-size = 16px * 200% */
+    font-size: 250%;
     /* background-color: aqua; */
+}
+
+h2, strong {
+    /* border-bottom: 1px solid black; */
+    text-decoration: underline;
+    /* font-size = 16px * 120% */
+    font-size: 1.3em;
 }
 
 p, .px {
     /* color: blue; */
     /* Font size measured in pixels (px) */
-    font-size: 20px;
+    /* font-size = 16px * 110% */
+    font-size: 110%;
 }
 
 .underline {
-    text-decoration: underline
+    text-decoration: underline;
+    /* Inherits font-size = 16px */
 }
 
+.em {
+    font-style: oblique;
+    /* font-size = 16px * 120% */
+    font-size: 1.2em;
+}
 
+.space {
+    /* Specifying line spacing */
+    line-height: 1.75em;
+}
+
+.light_background {
+    /* CSS Box Model: Margin >> Border >> Padding >> Content */
+    background-color: #FDB515;
+    color: #003262;
+    /* Padding: N E S W */
+    padding: 2px 2px 2px 2px;
+    /* Equivalent to border: white 3px solid; */
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.indent_left {
+    padding: 2em;
+    margin-left: 2px;
+}
+
+.indent_right {
+    margin-right: 640px;
+}
+
+.float_right {
+    float: right;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 50px;
+}
+
+.float_left {
+    float: left;
+    border-color: white;
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 50px;
+}
+
+/* The ID attribute */
+#center_video_audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#center_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#center_text {
+    /* 
+        text-align property:
+            text-align: center;
+            text-align: right;
+            text-align: left;
+    */
+    text-align: center;
+}

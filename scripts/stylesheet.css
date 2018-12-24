@@ -1,0 +1,26 @@
+/* Collectively called the CSS rule */
+
+body {
+    /* Inheritance and overriding */
+    font-size: 18px;
+    font-family: Verdana, Geneva, Arial, Arial Black;
+    font-weight: bold
+}
+
+h1, h2, strong {
+    /* CSS property goes here */
+    border-bottom: 1px solid black;
+    /* background-color: aqua; */
+}
+
+p, .px {
+    /* color: blue; */
+    /* Font size measured in pixels (px) */
+    font-size: 20px;
+}
+
+.underline {
+    text-decoration: underline
+}
+
+

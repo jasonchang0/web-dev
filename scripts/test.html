@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- Three ways of inserting CSS styling into HTML:
+            1. Internal style sheet
+            2. External style sheet
+            3. Inline -->
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <!-- <style> 
+        /* Collectively called the CSS rule */
+    </style> -->
+    
     <!-- The meta elements -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +30,7 @@
 
 <body>
     <h1><em>The Test Web Site</em> &#8482; &copy;</h1>
-    <p><em>Welcome to the Test Web Site. </em></p>
+    <p><em class="px">Welcome to the Test Web Site. </em></p>
 
     <br>
 
@@ -71,8 +82,8 @@
     <!-- Creating a table -->
     <table><a name="Myth"></a><strong>Myths and Misconceptions</strong> <br>
         <tr>
-            <th>Myth</th>
-            <th>Reality</th>
+            <th class="underline">Myth</th>
+            <th class="underline">Reality</th>
         </tr>
         <tr>
             <a name="m1"></a>
@@ -122,7 +133,13 @@
     <!-- Add audio/video elements -->
     <p> <a name="Debate"></a><strong> Jim Coplien and Bob Martin Debate TDD</strong>
         <br>
-        <br>
+
+        <blockquote class="px">
+            James O. Coplien &nbsp; - &nbsp; Vloeberghs Leerstoel (Vloeberghs Chair) at Vrije Universiteit Brussel
+            <br>
+            Robert Cecil Martin &nbsp; - &nbsp; American software engineer and author of the Agile Manifesto
+        </blockquote>
+
         Video (mp4): <br>
 
         <video controls="videocontrols" width="640" height="480" draggable="true">
@@ -151,7 +168,7 @@
     <form action="" method="">
         <fieldset>
             <!-- Fieldbox and legend elements -->
-            <legend> <Strong>Please share your experience with us: &nbsp;</Strong> </legend>
+            <legend> <Strong class="px">Please share your experience with us: &nbsp;</Strong> </legend>
 
             <!-- One-line text box -->
             <!-- Input elements go in here -->
@@ -243,3 +260,6 @@
 </html>
 
 <!-- // HTML 4.01 Strict, HTML 4.01 Transitional, XHTML 1.0 Strict -->
+
+
+

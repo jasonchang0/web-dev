@@ -29,6 +29,10 @@
 </head>
 
 <body>
+    <div class="div_logo drag">
+        <img src="../data/logo.png" title="Jason Chang Programming" alt="Jason Chang Programming" width="150" height="150" draggable="true">
+    </div>
+
     <!-- This is inline style -->
     <!-- <h1 style="color:black;font-size: 40px;"><em >The Test Web Site</em> &#8482; &copy;</h1> -->
 
@@ -52,9 +56,9 @@
     <br>
     <br>
     <h2>Test-Driven Development (TDD) Flow Chart</h2>
-    <div class="div_img">
+    <div class="div_img drag">
         <!-- Adding an image to a web page -->
-        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486">
+        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486" draggable="true">
     </div>
     <br>
     <br>
@@ -78,9 +82,15 @@
                 A SPAN element is in-line and selects a small chunks of HTML.
                 The DIV selects several elements while the SPAN works against HTML inside a element
              -->
-            <span class="red_highlight"><li> Red &nbsp; – &nbsp; Failure of test case. </li></span>
-            <span class="green_highlight"><li> Green &nbsp; – &nbsp; Code and get the new test case pass.</li></span>
-            <span class="green_highlight"><li> Green &nbsp; – &nbsp; Ensure all old test cases also pass.</li></span>
+            <span class="red_highlight">
+                <li> Red &nbsp; – &nbsp; Failure of test case. </li>
+            </span>
+            <span class="green_highlight">
+                <li> Green &nbsp; – &nbsp; Code and get the new test case pass.</li>
+            </span>
+            <span class="green_highlight">
+                <li> Green &nbsp; – &nbsp; Ensure all old test cases also pass.</li>
+            </span>
             <li> Refactor the code to clean it.</li>
             <li> Repeat this cycle.</li>
         </ol>
@@ -91,60 +101,68 @@
     <br>
 
     <div id="div_myth">
-        <!-- Creating a table -->
-        <table class="space light_background indent_right"><a name="Myth"></a><strong>Myths and Misconceptions</strong>
-            <div>
-                <img class="float_right" draggable="true" , src="../data/programming.jpg">
-            </div>
+        <a name="Myth"></a><strong>Myths and Misconceptions</strong>
 
-            <br>
-            <br>
+        <div>
+            <img class="float_right drag" draggable="true" , src="../data/programming.jpg">
+        </div>
 
-            <tr>
-                <th class="underline">Myth</th>
-                <th class="underline">Reality</th>
-            </tr>
-            <tr>
-                <a name="m1"></a>
-                <td>You create a 100% regression test suite &nbsp;&nbsp;</td>
-                <td>Although this sounds like a good goal, and it is, it unfortunately isn't realistic</td>
-            </tr>
+        <br>
+        <br>
+        <br>
 
-            <tr>
-                <a name="m2"></a>
-                <td>The unit tests form 100% of your design specification &nbsp;&nbsp;</td>
-                <td>The reality is that the unit test form a fair bit of the design specification, similarly acceptance
-                    tests form a fair bit of your requirements specification, but there's more to it than this.</td>
-            </tr>
+        <div id="div_table" class="space light_background indent_right">
+            <!-- Creating a table -->
+            <table>
+                <tr>
+                    <th class="underline">Myth</th>
+                    <th class="underline">Reality</th>
+                </tr>
+                <tr>
+                    <a name="m1"></a>
+                    <td>You create a 100% regression test suite &nbsp;&nbsp;</td>
+                    <td>Although this sounds like a good goal, and it is, it unfortunately isn't realistic</td>
+                </tr>
 
-            <tr>
-                <a name="m3"></a>
-                <td>You only need to unit test &nbsp;&nbsp;</td>
-                <td>For all but the simplest systems this is completely false. The agile community is very clear about
-                    the
-                    need for a host of other testing techniques. </td>
-            </tr>
+                <tr>
+                    <a name="m2"></a>
+                    <td>The unit tests form 100% of your design specification &nbsp;&nbsp;</td>
+                    <td>The reality is that the unit test form a fair bit of the design specification, similarly
+                        acceptance
+                        tests form a fair bit of your requirements specification, but there's more to it than this.</td>
+                </tr>
 
-            <tr>
-                <a name="m4"></a>
-                <td>TDD is sufficient for testing &nbsp;&nbsp;</td>
-                <td>At the unit/developer test as well as at the customer test level, TDD is only part of your overall
-                    testing efforts.</td>
-            </tr>
+                <tr>
+                    <a name="m3"></a>
+                    <td>You only need to unit test &nbsp;&nbsp;</td>
+                    <td>For all but the simplest systems this is completely false. The agile community is very clear
+                        about
+                        the
+                        need for a host of other testing techniques. </td>
+                </tr>
 
-            <tr>
-                <a name="m5"></a>
-                <td>TDD doesn't scale &nbsp;&nbsp;</td>
-                <td>
-                    <ol>
-                        <li>Your test suite takes too long to run.</li>
-                        <li>Not all developers know how to test.</li>
-                        <li>Everyone might not be taking a TDD approach.</li>
-                    </ol>
-                </td>
-            </tr>
+                <tr>
+                    <a name="m4"></a>
+                    <td>TDD is sufficient for testing &nbsp;&nbsp;</td>
+                    <td>At the unit/developer test as well as at the customer test level, TDD is only part of your
+                        overall
+                        testing efforts.</td>
+                </tr>
 
-        </table>
+                <tr>
+                    <a name="m5"></a>
+                    <td>TDD doesn't scale &nbsp;&nbsp;</td>
+                    <td>
+                        <ol>
+                            <li>Your test suite takes too long to run.</li>
+                            <li>Not all developers know how to test.</li>
+                            <li>Everyone might not be taking a TDD approach.</li>
+                        </ol>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
     </div>
 
     <br>
@@ -168,7 +186,7 @@
             </blockquote>
         </center>
 
-        <video class="center_video_audio" controls="videocontrols" width="640" height="480" draggable="true">
+        <video class="center_video_audio drag" controls="videocontrols" width="640" height="480" draggable="true">
             <!-- Three standard formats for web browsers are .mp4/.webm/.ogg -->
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp4" />
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.webm" />
@@ -184,7 +202,7 @@
             </blockquote>
         </center>
 
-        <audio class="center_video_audio" controls="audiocontrols" draggable="true"><a name="Debate"></a>
+        <audio class="center_video_audio drag" controls="audiocontrols" draggable="true"><a name="Debate"></a>
             <!-- Three standard formats for web browsers are .mp3/.wav/.ogg -->
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp3" />
             <source src="../data/Jim Coplien and Bob Martin Debate TDD.wav" />

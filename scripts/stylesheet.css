@@ -57,10 +57,16 @@ p, .px {
     color: #003262;
     /* Padding: N E S W */
     padding: 2px 2px 2px 2px;
+    /* Border Property */
     /* Equivalent to border: white 3px solid; */
     border-color: white;
     border-width: 3px;
-    border-style: solid;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
 }
 
 .indent_left {
@@ -76,7 +82,12 @@ p, .px {
     float: right;
     border-color: white;
     border-width: 3px;
-    border-style: solid;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
     margin-top: 50px;
 }
 
@@ -84,24 +95,39 @@ p, .px {
     float: left;
     border-color: white;
     border-width: 3px;
-    border-style: solid;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
     margin-top: 50px;
 }
 
 /* The ID attribute */
-#center_video_audio {
+
+.center_video_audio {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#center_image {
+.qcenter_image {
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-color: white;
+    border-width: 5px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
 }
 
-#center_text {
+.center_text {
     /* 
         text-align property:
             text-align: center;
@@ -109,4 +135,44 @@ p, .px {
             text-align: left;
     */
     text-align: center;
+}
+
+.div_img {
+    text-align: center;
+    display: block;
+    background-color: #4E2A84;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    border-width: 5px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+}
+
+.red_highlight {
+    color: red;
+}
+
+.green_highlight {
+    color: green;
+}
+
+/* Special effects are instantiated with 
+pseudo-classes -> states of the object, 
+no need to be declared in HTML 
+(Keep in the same order) */
+a:link {
+   color: #003262;
+}
+
+a:visited {
+    color: #3B7EA1;
+}
+
+a:hover {
+    color: #FDB515;
 }

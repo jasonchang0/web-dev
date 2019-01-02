@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Three ways of inserting CSS styling into HTML:
+            1. Internal style sheet
+            2. External style sheet
+            3. Inline -->
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <!-- <style> 
+        /* Collectively called the CSS rule */
+    </style> -->
+
+    <!-- The meta elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="This is a web page about est-Driven Development (TDD), 
+    a traditional programming method." />
+    <meta name="keywords" content="programming, test, unit, testing" />
+
+    <meta http-equiv="author" content="Jason Chang" />
+    <meta http-equiv="content-language" content="en-us" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test-Driven Development</title>
+</head>
+
+<body>
+    <!-- This is inline style -->
+    <!-- <h1 style="color:black;font-size: 40px;"><em >The Test Web Site</em> &#8482; &copy;</h1> -->
+
+    <h1 class="center_text"><em>The Test-Driven Development Site</em> &#8482; &copy;</h1>
+    <p class="center_text"><em class="px">Welcome to the Test-Driven Development Site. </em></p>
+
+    <br>
+
+    <!-- This is the start of the html code for the second section and we will start each section with a header tag.-->
+    <h2>This is a section on Test-Driven Development </h2>
+    <p>Test-Driven Development (TDD) is a programming method where the programmer writes the tests for a function
+        BEFORE the actual function is written.</p>
+
+    <ul class="space light_background indent_left">
+        <!-- Creating links within the same web page -->
+        <li> <a href="#Steps"> Steps of TDD Approach</a></li>
+        <li><a href="#Myth"> Myths and Misconceptions</a></li>
+        <li><a href="#Debate"> Debate on TDD</a></li>
+    </ul>
+
+    <br>
+    <br>
+    <h2>Test-Driven Development (TDD) Flow Chart</h2>
+    <div class="div_img">
+        <!-- Adding an image to a web page -->
+        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486">
+    </div>
+    <br>
+    <br>
+
+    <!-- Order and unordered lists -->
+    <!-- <ul>
+        <li> Think & write test cases. </li>
+        <li> Red – Failure of test case. </li>
+        <li> Green – Code and get the new test case pass.</li>
+        <li> Green – Ensure all old test cases also pass.</li>
+        <li> Refactor the code to clean it.</li>
+        <li> Repeat this cycle.</li>
+    </ul> -->
+    <div id="div_steps">
+        <a name="Steps"></a><strong>Steps</strong> <br>
+        <ol class="space light_background indent_left">
+            <li> Think &amp; write test cases. </li>
+            <!-- 
+                SPAN is similar to the DIV but operates on a smaller scale
+
+                A SPAN element is in-line and selects a small chunks of HTML.
+                The DIV selects several elements while the SPAN works against HTML inside a element
+             -->
+            <span class="red_highlight"><li> Red &nbsp; – &nbsp; Failure of test case. </li></span>
+            <span class="green_highlight"><li> Green &nbsp; – &nbsp; Code and get the new test case pass.</li></span>
+            <span class="green_highlight"><li> Green &nbsp; – &nbsp; Ensure all old test cases also pass.</li></span>
+            <li> Refactor the code to clean it.</li>
+            <li> Repeat this cycle.</li>
+        </ol>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="div_myth">
+        <!-- Creating a table -->
+        <table class="space light_background indent_right"><a name="Myth"></a><strong>Myths and Misconceptions</strong>
+            <div>
+                <img class="float_right" draggable="true" , src="../data/programming.jpg">
+            </div>
+
+            <br>
+            <br>
+
+            <tr>
+                <th class="underline">Myth</th>
+                <th class="underline">Reality</th>
+            </tr>
+            <tr>
+                <a name="m1"></a>
+                <td>You create a 100% regression test suite &nbsp;&nbsp;</td>
+                <td>Although this sounds like a good goal, and it is, it unfortunately isn't realistic</td>
+            </tr>
+
+            <tr>
+                <a name="m2"></a>
+                <td>The unit tests form 100% of your design specification &nbsp;&nbsp;</td>
+                <td>The reality is that the unit test form a fair bit of the design specification, similarly acceptance
+                    tests form a fair bit of your requirements specification, but there's more to it than this.</td>
+            </tr>
+
+            <tr>
+                <a name="m3"></a>
+                <td>You only need to unit test &nbsp;&nbsp;</td>
+                <td>For all but the simplest systems this is completely false. The agile community is very clear about
+                    the
+                    need for a host of other testing techniques. </td>
+            </tr>
+
+            <tr>
+                <a name="m4"></a>
+                <td>TDD is sufficient for testing &nbsp;&nbsp;</td>
+                <td>At the unit/developer test as well as at the customer test level, TDD is only part of your overall
+                    testing efforts.</td>
+            </tr>
+
+            <tr>
+                <a name="m5"></a>
+                <td>TDD doesn't scale &nbsp;&nbsp;</td>
+                <td>
+                    <ol>
+                        <li>Your test suite takes too long to run.</li>
+                        <li>Not all developers know how to test.</li>
+                        <li>Everyone might not be taking a TDD approach.</li>
+                    </ol>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="div_debate">
+        <!-- Add audio/video elements -->
+        <a name="Debate"></a><strong> Jim Coplien and Bob Martin Debate TDD</strong>
+        <br>
+
+        <blockquote class="px space">
+            James O. Coplien &nbsp; - &nbsp; Vloeberghs Leerstoel (Vloeberghs Chair) at Vrije Universiteit Brussel
+            <br>
+            Robert Cecil Martin &nbsp; - &nbsp; American software engineer and author of the Agile Manifesto
+        </blockquote>
+
+        <center>
+            <blockquote class="center">
+                Video (mp4): <br>
+            </blockquote>
+        </center>
+
+        <video class="center_video_audio" controls="videocontrols" width="640" height="480" draggable="true">
+            <!-- Three standard formats for web browsers are .mp4/.webm/.ogg -->
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp4" />
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.webm" />
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
+        </video>
+
+        <br>
+        <br>
+
+        <center>
+            <blockquote>
+                Audio (mp3): <br>
+            </blockquote>
+        </center>
+
+        <audio class="center_video_audio" controls="audiocontrols" draggable="true"><a name="Debate"></a>
+            <!-- Three standard formats for web browsers are .mp3/.wav/.ogg -->
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp3" />
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.wav" />
+            <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
+        </audio>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="div_form">
+        <form class="light_background" action="" method="">
+            <fieldset>
+                <!-- Fieldbox and legend elements -->
+                <legend> <Strong class="px">Please share your experience with us: &nbsp;</Strong> </legend>
+
+                <!-- One-line text box -->
+                <!-- Input elements go in here -->
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="">
+
+                <br>
+                <br>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="">
+
+                <br>
+                <br>
+
+                <!-- Radio buttons -->
+                Enjoy so far&#63; <br>
+                <input type="radio" name="yes/no" value=""> Yes <br>
+                <input type="radio" name="yes/no" value=""> No
+
+                <br>
+                <br>
+
+                <!-- Checkbox -->
+                Which myth do you agree with&#63; <br>
+                <input type="checkbox" name=""> <a href="#m1"> # 1 </a><br>
+                <input type="checkbox" name=""> <a href="#m2"> # 2 </a><br>
+                <input type="checkbox" name=""> <a href="#m3"> # 3 </a><br>
+                <input type="checkbox" name=""> <a href="#m4"> # 4 </a><br>
+                <input type="checkbox" name=""> <a href="#m5"> # 5 </a><br>
+
+                <br>
+
+                <!-- NUmber input box -->
+                How many myths did you agree with&#63;
+                <input type="number" min="1" max="5">
+
+                <br>
+                <br>
+
+                <!-- Drop-down list -->
+                Rate this site on a 1-10 scale:
+                <select>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                </select>
+
+                <br>
+                <br>
+
+                <!-- Date and number box -->
+                Enter the day of submission:
+                <input type="date" name="day">
+
+                <br>
+                <br>
+
+                <!-- Multi-line text box -->
+                Comments: <br>
+                <!-- <label for="feedback">Feedback:</label> -->
+                <textarea rows="10" cols="80"></textarea>
+
+                <br>
+
+                <input type="submit" value="Submit">
+
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Creating a web link -->
+    <p>
+        Compare to:
+        <a href="bdd.html"> Behavior-Driven Development (BDD)</a>
+    </p>
+
+    <p>Source:
+        <a href="http://agiledata.org/essays/tdd.html"> link</a>
+    </p>
+
+    <p>
+        This web page was constructed on December 23<sup>rd</sup>, 2018.
+    </p>
+
+    <!-- <p>
+        Stay hydrated by drinking lots of H<sub>2</sub>O.
+    </p> -->
+
+</body>
+
+</html>
+
+<!-- // HTML 4.01 Strict, HTML 4.01 Transitional, XHTML 1.0 Strict -->

@@ -30,35 +30,41 @@
 
 <body>
     <div class="div_logo drag">
-        <img src="../data/logo.png" title="Jason Chang Programming" alt="Jason Chang Programming" width="150" height="150" draggable="true">
+        <img src="../data/logo.png" title="Jason Chang Programming" alt="Jason Chang Programming" width="150" height="150"
+            draggable="true">
     </div>
 
     <!-- This is inline style -->
     <!-- <h1 style="color:black;font-size: 40px;"><em >The Test Web Site</em> &#8482; &copy;</h1> -->
 
     <h1 class="center_text"><em>The Test-Driven Development Site</em> &#8482; &copy;</h1>
-    <p class="center_text"><em class="px">Welcome to the Test-Driven Development Site. </em></p>
+    <p class="center_text"><em class="px">Test-Driven Development (TDD) is a programming method where the programmer</em></p>
+    <p class="center_text"><em class="px">writes the tests for a function BEFORE the actual function is written. </em></p>
 
     <br>
 
     <!-- This is the start of the html code for the second section and we will start each section with a header tag.-->
-    <h2>This is a section on Test-Driven Development </h2>
+    <!-- <h2>This is a section on Test-Driven Development </h2>
     <p>Test-Driven Development (TDD) is a programming method where the programmer writes the tests for a function
-        BEFORE the actual function is written.</p>
+        BEFORE the actual function is written.</p> -->
 
-    <ul class="space light_background indent_left">
-        <!-- Creating links within the same web page -->
-        <li> <a href="#Steps"> Steps of TDD Approach</a></li>
-        <li><a href="#Myth"> Myths and Misconceptions</a></li>
-        <li><a href="#Debate"> Debate on TDD</a></li>
-    </ul>
+    <div id="div_menu">
+        <ul>
+            <!-- Creating links within the same web page -->
+            <li> <a class="button" href="#Steps"> Steps of TDD Approach</a></li>
+            <li><a class="button" href="#Myth"> Myths and Misconceptions</a></li>
+            <li><a class="button" href="#Debate"> Debate on TDD</a></li>
+        </ul>
+    </div>
 
     <br>
     <br>
+
     <h2>Test-Driven Development (TDD) Flow Chart</h2>
     <div class="div_img drag">
         <!-- Adding an image to a web page -->
-        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486" draggable="true">
+        <img src="../data/tdd_chart.png" title="TDD Flow Chart" alt="TDD Flow Chart" width="1032" height="486"
+            draggable="true">
     </div>
     <br>
     <br>
@@ -111,7 +117,7 @@
         <br>
         <br>
 
-        <div id="div_table" class="space light_background indent_right">
+        <div id="div_table" class="space dark_background indent_right">
             <!-- Creating a table -->
             <table>
                 <tr>
@@ -172,46 +178,48 @@
     <div id="div_debate">
         <!-- Add audio/video elements -->
         <a name="Debate"></a><strong> Jim Coplien and Bob Martin Debate TDD</strong>
+
         <br>
 
-        <blockquote class="px space">
-            James O. Coplien &nbsp; - &nbsp; Vloeberghs Leerstoel (Vloeberghs Chair) at Vrije Universiteit Brussel
-            <br>
-            Robert Cecil Martin &nbsp; - &nbsp; American software engineer and author of the Agile Manifesto
-        </blockquote>
-
-        <center>
-            <blockquote class="center">
-                Video (mp4): <br>
+        <div id="div_description" class="light_background float_left">
+            <blockquote class="px space">
+                James O. Coplien &nbsp; - &nbsp; Vloeberghs Leerstoel (Vloeberghs Chair) at Vrije Universiteit Brussel
+                <br>
+                Robert Cecil Martin &nbsp; - &nbsp; American software engineer and author of the Agile Manifesto
             </blockquote>
-        </center>
+        </div>
 
-        <video class="center_video_audio drag" controls="videocontrols" width="640" height="480" draggable="true">
-            <!-- Three standard formats for web browsers are .mp4/.webm/.ogg -->
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp4" />
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.webm" />
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
-        </video>
+        <div id="div_media" class="light_background float_left">
+            <center>
+                <blockquote class="center">
+                    Video (mp4): <br>
+                </blockquote>
+            </center>
 
-        <br>
-        <br>
+            <video class="center_video_audio drag" controls="videocontrols" width="640" height="480" draggable="true">
+                <!-- Three standard formats for web browsers are .mp4/.webm/.ogg -->
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp4" />
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.webm" />
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
+            </video>
 
-        <center>
-            <blockquote>
-                Audio (mp3): <br>
-            </blockquote>
-        </center>
+            <center>
+                <blockquote>
+                    Audio (mp3): <br>
+                </blockquote>
+            </center>
 
-        <audio class="center_video_audio drag" controls="audiocontrols" draggable="true"><a name="Debate"></a>
-            <!-- Three standard formats for web browsers are .mp3/.wav/.ogg -->
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp3" />
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.wav" />
-            <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
-        </audio>
+            <audio class="center_video_audio drag" controls="audiocontrols" draggable="true"><a name="Debate"></a>
+                <!-- Three standard formats for web browsers are .mp3/.wav/.ogg -->
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.mp3" />
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.wav" />
+                <source src="../data/Jim Coplien and Bob Martin Debate TDD.ogg" />
+            </audio>
+        </div>
+
+
     </div>
 
-    <br>
-    <br>
     <br>
 
     <div id="div_form">
@@ -222,16 +230,16 @@
 
                 <!-- One-line text box -->
                 <!-- Input elements go in here -->
-                <label for="firstname">First Name:</label>
-                <input type="text" id="firstname" name="">
+                <div class="row_form">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="">
+                </div>
 
-                <br>
-                <br>
+                <div class="row_form">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="">
+                </div>
 
-                <label for="lastname">Last Name:</label>
-                <input type="text" id="lastname" name="">
-
-                <br>
                 <br>
 
                 <!-- Radio buttons -->
@@ -296,6 +304,8 @@
             </fieldset>
         </form>
     </div>
+
+    <br>
 
     <!-- Creating a web link -->
     <p>

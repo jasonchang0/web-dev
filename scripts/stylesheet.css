@@ -3,7 +3,7 @@
 body {
     /* Inheritance and overriding */
     font-size: 16px;
-    font-family: sans-serif, Verdana, Geneva, Arial, Arial Black;
+    font-family: sans-serif, Verdana, Geneva, Georgia, Arial, Arial Black;
     font-weight: bold;
     color: snow;
     /* background-color: aliceblue; */
@@ -51,12 +51,30 @@ p, .px {
     line-height: 1.75em;
 }
 
+.dark_background {
+    /* CSS Box Model: Margin >> Border >> Padding >> Content */
+    color: #FDB515;
+    background-color: #4E2A84;
+    /* Padding: N E S W */
+    padding: 3px 3px 3px 3px;
+    /* Border Property */
+    /* Equivalent to border: white 3px solid; */
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+}
+
 .light_background {
     /* CSS Box Model: Margin >> Border >> Padding >> Content */
     background-color: #FDB515;
     color: #003262;
     /* Padding: N E S W */
-    padding: 2px 2px 2px 2px;
+    padding: 3px 3px 3px 3px;
     /* Border Property */
     /* Equivalent to border: white 3px solid; */
     border-color: white;
@@ -120,7 +138,7 @@ p, .px {
     margin-left: auto;
     margin-right: auto;
     border-color: white;
-    border-width: 5px;
+    border-width: 3px;
     border-style: ridge;
     /* border-radius: 10px; */
     border-bottom-left-radius: 0px;
@@ -146,7 +164,7 @@ p, .px {
     margin-left: auto;
     margin-right: auto;
     border-color: white;
-    border-width: 5px;
+    border-width: 3px;
     border-style: ridge;
     /* border-radius: 10px; */
     border-bottom-left-radius: 0px;
@@ -172,7 +190,7 @@ p, .px {
     right: 5px;
     width: 150px;
     height: 150px;
-    border-color: white;
+    border-color: gray;
     border-width: 5px;
     border-style: ridge;
     border-bottom-left-radius: 0px;
@@ -180,6 +198,7 @@ p, .px {
     border-top-left-radius: 10px;
     border-top-right-radius: 0px;
 }
+
 }
 
 .red_highlight {
@@ -205,8 +224,9 @@ p, .px {
 pseudo-classes -> states of the object, 
 no need to be declared in HTML 
 (Keep in the same order) */
+
 a:link {
-   color: #003262;
+    color: #003262;
 }
 
 a:visited {
@@ -217,4 +237,137 @@ a:hover {
     color: #FDB515;
     /* Cursor property */
     cursor: url("../data/link_icon.png"), crosshair;
+}
+
+/* Convert an unordered list to vertical menu*/
+
+/* ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+} 
+
+ul li a {
+    text-decoration: none;
+    background: #003262;
+    display: block;
+    width: 300px;
+    margin: 5px;
+    padding: 5px;
+    border-color: #FDB515;
+    border-width: 3px;
+    border-style: ridge;
+    border-radius: 5px;
+    Centered text horizontally
+    text-align: center;
+    Centered text vertically
+    height: 30px;
+    line-height: 30px;
+} 
+
+ul li a:link {
+    color: #FDB515;
+} 
+
+ul li a:visited {
+    color: white;
+} 
+
+ul li a:hover {
+    background: #d3d3d3;
+    color: #003262;
+}  */
+
+/* Convert an unordered list to horizontal menu with buttons*/
+
+.button {
+    background: #4E2A84;
+    /* 25 + 8 * 2 */
+    height: 41px;
+    border-color: #FDB515;
+    border-width: 2px;
+    border-style: ridge;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 40px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+#div_menu ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-align: center;
+}
+
+#div_menu li {
+    display: inline;
+    padding: 50px;
+    vertical-align: middle;
+}
+
+#div_menu a {
+    /* text-decoration property is 
+    not inheritable.*/
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#div_menu a:link {
+    color: #FDB515;
+}
+
+#div_menu a:visited {
+    color: #C4820E;
+}
+
+#div_menu a:hover {
+    background: #d3d3d3;
+    color: #003262;
+}
+
+#div_form {
+    display: table;
+}
+
+#div_form form {
+    padding: 5px 10px 5px 10px;
+}
+
+.row_form {
+    display: table-row;
+}
+
+.row_form label {
+    display: table-cell;
+    padding: 10px 0px;
+    /* text-align: right; */
+}
+
+.row_form input {
+    display: table-cell;
+    padding: 2px;
+}
+
+#div_media {
+    margin: 10px 20px;
+    width: 50%;
+}
+
+#div_media video {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#div_media audio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#div_description {
+    margin: 20px 20px 10px 20px;
+    width: 50%;
 }

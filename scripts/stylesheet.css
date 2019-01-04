@@ -1,5 +1,6 @@
 /* Collectively called the CSS rule */
 
+/* Type Selectors - select element by type */
 body {
     /* Inheritance and overriding */
     font-size: 16px;
@@ -12,18 +13,22 @@ body {
     background-image: url(../data/rain_background.gif);
 }
 
-h1 {
+h1, h2, strong {
     /* CSS property goes here */
     /* border-bottom: 1px solid black; */
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    /* text-shadow: Horizontal Vertical Blur Color*/
+    text-shadow: 3px 3px 5px rgba(253, 181, 21, 0.75), 6px 6px 10px rgba(59, 126, 161, 0.3);
+}
+
+h1 {
     /* font-size = 16px * 200% */
     font-size: 250%;
     /* background-color: aqua; */
 }
 
+/* Combine Selectors */
 h2, strong {
-    /* border-bottom: 1px solid black; */
-    text-decoration: underline;
     /* font-size = 16px * 120% */
     font-size: 1.3em;
 }
@@ -35,6 +40,7 @@ p, .px {
     font-size: 110%;
 }
 
+/* Class Selector - select element with . */
 .underline {
     text-decoration: underline;
     /* Inherits font-size = 16px */
@@ -51,10 +57,7 @@ p, .px {
     line-height: 1.75em;
 }
 
-.dark_background {
-    /* CSS Box Model: Margin >> Border >> Padding >> Content */
-    color: #FDB515;
-    background-color: #4E2A84;
+.light_background, .dark_background, .grad_background {
     /* Padding: N E S W */
     padding: 3px 3px 3px 3px;
     /* Border Property */
@@ -69,22 +72,25 @@ p, .px {
     border-top-right-radius: 0px;
 }
 
+.dark_background {
+    /* CSS Box Model: Margin >> Border >> Padding >> Content */
+    background-color: #4E2A84;
+    color: #FDB515;
+    box-shadow: 2px 2px 10px 2px white;
+}
+
 .light_background {
     /* CSS Box Model: Margin >> Border >> Padding >> Content */
     background-color: #FDB515;
     color: #003262;
-    /* Padding: N E S W */
-    padding: 3px 3px 3px 3px;
-    /* Border Property */
-    /* Equivalent to border: white 3px solid; */
-    border-color: white;
-    border-width: 3px;
-    border-style: ridge;
-    /* border-radius: 10px; */
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 0px;
+    /* box-shadow: Horizontal Vertical Blur Spread_Radius */
+    box-shadow: 2px 2px 10px 2px #003262;
+}
+
+.grad_background {
+    background: linear-gradient(60deg,  rgba(253, 181, 21, 1.0), rgba(238, 50, 78, 0.8));
+    color: white;
+    box-shadow: inset 2px 2px 15px #4E2A84, 1px 1px 5px 1px #4E2A84;
 }
 
 .indent_left {
@@ -106,8 +112,8 @@ p, .px {
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 0px;
-    margin-top: 55px;
-    margin-bottom: 55px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .float_left {
@@ -161,6 +167,7 @@ p, .px {
     text-align: center;
     display: block;
     background-color: #4E2A84;
+    box-shadow: 2px 2px 10px 2px white;
     margin-left: auto;
     margin-right: auto;
     border-color: white;
@@ -171,6 +178,11 @@ p, .px {
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 0px;
+    opacity: 0.70;
+}
+
+.div_img:hover {
+    opacity: 1.0;
 }
 
 .div_logo {
@@ -197,8 +209,7 @@ p, .px {
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 0px;
-}
-
+    box-shadow: 2px 2px 10px 2px snow;
 }
 
 .red_highlight {
@@ -213,6 +224,7 @@ p, .px {
     cursor: move;
 }
 
+/* ID Selector - select element with # */
 #div_table {
     width: auto;
     border-bottom-right-radius: 0px;
@@ -281,7 +293,7 @@ ul li a:hover {
 /* Convert an unordered list to horizontal menu with buttons*/
 
 .button {
-    background: #4E2A84;
+    background: #003262;
     /* 25 + 8 * 2 */
     height: 41px;
     border-color: #FDB515;
@@ -293,9 +305,11 @@ ul li a:hover {
     padding: 5px 40px;
     text-align: center;
     box-sizing: border-box;
+    box-shadow: 1px 1px 10px 1px #FDB515;
 
 }
 
+/* Descendant Selector - select element inside another element */
 #div_menu ul {
     padding: 0px;
     margin: 0px;
@@ -325,8 +339,8 @@ ul li a:hover {
 }
 
 #div_menu a:hover {
-    background: #d3d3d3;
-    color: #003262;
+    background: linear-gradient(60deg, rgba(78, 42, 132, 1.0), green, rgba(253, 181, 21, 0.70));
+    color: white;
 }
 
 #div_form {
@@ -357,12 +371,13 @@ ul li a:hover {
     width: 50%;
 }
 
-#div_media video {
+/* Child Selector - select DIRECT CHILD element inside another element */
+#div_media>video {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#div_media audio {
+#div_media>audio {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -370,4 +385,16 @@ ul li a:hover {
 #div_description {
     margin: 20px 20px 10px 20px;
     width: 50%;
+}
+
+#div_myth {
+    opacity: 0.70;
+}
+
+#div_myth:hover {
+    opacity: 1.0;
+}
+
+#myth_img {
+    box-shadow: 2px 2px 10px 2px white;
 }

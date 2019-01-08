@@ -1,0 +1,170 @@
+body {
+    background-image: url(../../data/shape_background.gif);
+    margin: 0px;
+    font-size: 14px;
+    font-family: sans-serif, Verdana, Geneva, Georgia, Arial, Arial Black;
+}
+
+#container {
+    width: 400px;
+    margin: 0px auto;
+}
+
+a:link {
+    color: rgb(0, 43, 92);
+}
+
+a:visited {
+    color: #3B7EA1;
+}
+
+a:hover {
+    color: #FDB515;
+    /* Cursor property */
+    cursor: url("../../data/link_icon.png"), crosshair;
+}
+
+#header, #navbar ul, #footer, .side_right {
+    background-color: #C4CED4;
+    color: rgb(0, 43, 92);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.div_logo {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 0px;
+    float: left;
+    width: 140px;
+    height: 140px;
+    clear: right;
+    border-color: silver;
+    border-width: 2.5px;
+    border-style: ridge;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+#header {
+    /* The width and height properties include the content, but does not include the padding, border, or margin. */
+    /* 400 - 170 - 10 = 220*/
+    width: 220px;
+    height: 90px;
+    margin-left: 170px;
+}
+
+#navbar ul {
+    height: 35px;
+    padding: 5px;
+    font-size: 12px;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 170px;
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 5px 5px;
+}
+
+#navbar ul li a:hover {
+    background: linear-gradient(60deg, rgba(0, 43, 92, 1.0), green, rgba(253, 181, 21, 0.70));
+    color: white;
+}
+
+#footer {
+    width: 370px;
+    padding: 5px;
+    height: 75px;
+    /* Protects footer from left/right sidebars */
+    clear: both;
+    text-align: center;
+    font-size: 90%;
+}
+
+#footer ul {
+    list-style-type: none;
+    text-align: cetner;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+#footer ul li {
+    display: inline;
+}
+
+#footer ul li a {
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0.25em 2.5em;
+}
+
+#footer ul li a:hover {
+    background: linear-gradient(60deg, rgba(0, 43, 92, 1.0), green, rgba(253, 181, 21, 0.70));
+    color: white;
+}
+
+.main {
+    background-color: #002B5C;
+    /* 260 + 20 + 20 + 10 + 10 = 320 */
+    margin: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.1em;
+    /* 400 - 10*2 - 20*2 = 340*/
+    width: 340px;
+}
+
+.space {
+    line-height: 1.75em;
+}
+
+h0, h1, .main p, ol li {
+    color: white;
+}
+
+h0 {
+    font-size: 2.0em;
+}
+
+h1 {
+    font-size: 130%;
+}
+
+h2 {
+    color: #E31837;
+}
+
+h3 {
+    letter-spacing: 5px;
+    font-size: 1.0em;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#header h3 em {
+    font-size: 0.75em;
+}
+
+.side_right, .side_img {
+    display: none;
+}
+
+.drag {
+    cursor: move;
+}

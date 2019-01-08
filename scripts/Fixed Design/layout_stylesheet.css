@@ -1,8 +1,13 @@
 body {
-    background-image: url(../data/shape_background.gif);
+    background-image: url(../../data/shape_background.gif);
     margin: 0px;
     font-size: 14px;
     font-family: sans-serif, Verdana, Geneva, Georgia, Arial, Arial Black;
+}
+
+#container {
+    width: 1620px;
+    margin: 0px auto;
 }
 
 a:link {
@@ -16,7 +21,7 @@ a:visited {
 a:hover {
     color: #FDB515;
     /* Cursor property */
-    cursor: url("../data/link_icon.png"), crosshair;
+    cursor: url("../../data/link_icon.png"), crosshair;
 }
 
 #header, #navbar ul, #footer, .side_right {
@@ -27,7 +32,12 @@ a:hover {
 }
 
 .div_logo {
-    margin: 0px 20px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 10px;
     padding: 0px;
     float: right;
     width: 140px;
@@ -41,9 +51,10 @@ a:hover {
 }
 
 #header {
-    /* No input for width for liquid responsive website design */
+    /* 1620 - 180 - 10 = 1430*/
+    width: 1440px;
     height: 90px;
-    margin-right: 180px;
+    margin-right: 170px;
 }
 
 #navbar ul {
@@ -52,7 +63,7 @@ a:hover {
     font-size: 25px;
     list-style-type: none;
     text-align: center;
-    margin-right: 180px;
+    margin-right: 170px;
 }
 
 #navbar ul li {
@@ -71,6 +82,7 @@ a:hover {
 }
 
 #footer {
+    width: 1620px;
     padding: 5px;
     height: 75px;
     /* Protects footer from left/right sidebars */
@@ -111,6 +123,8 @@ a:hover {
     border-radius: 5px;
     padding: 20px;
     font-size: 1.1em;
+    /* 1620 - 460 - 10*2 - 10 - 20 = 1140*/
+    width: 1110px;
 }
 
 .space {
@@ -150,7 +164,8 @@ h3 {
 }
 
 .side_right {
-    margin-top: 0px;;
+    margin-top: 0px;
+    ;
     padding: 20px;
     font-size: 105%;
     float: right;
@@ -163,7 +178,7 @@ h3 {
 
 .side_right:hover {
     opacity: 1.0;
-    cursor: url("../data/hourglass_icon.png"), crosshair;
+    cursor: url("../../data/hourglass_icon.png"), crosshair;
 }
 
 .side_right p {
@@ -186,4 +201,44 @@ h3 {
 
 .drag {
     cursor: move;
+}
+
+/* Media queries for displaying on 
+devices with different resolutions. */
+@media (max-width:1310px) {
+    .side_right, .side_img {
+        display: none;
+    }
+
+    .div_logo {
+        float: left;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    #header, #navbar ul{
+        margin-left: 170px;
+        margin-right: 10px;
+    }
+}
+
+/* Create multiple media queries with range for screen width*/
+@media (min-width: 401px) and (max-width:900px) {
+    .main {
+        background-color: #4E2A84;
+    }
+    h0, h1, .main p, ol li {
+        color: goldenrod;
+    }
+}
+
+/* Specify display for mobile devices*/
+@media only screen and (max-width: 900px) {
+    .main {
+        background-color: #FDB927;
+    }
+
+    h0, h1, .main p, ol li {
+        color: #552583;
+    }
 }

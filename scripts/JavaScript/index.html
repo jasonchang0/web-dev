@@ -6,14 +6,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <script src="script.js">
-        
-    </script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
+    <p id="sub1" class="para"> Some text that changes style when submission is made. </p>
 
+    <p id="sub2" class="para"> No submissions are made. </p>
+
+    <p id="sub3" class="para"> Hello world, </p>
+
+    <p id="sub4" class="para"> welcome to JavaScript. </p>
+
+    <p id="sub5" class="para"></p>
+
+    <button onclick="changeStyle(), changeText()"> Submit </button>
+
+    <button onclick="combineText()"> Combine </button>
+
+    <br>
+    <br>
+
+    <img id="weather" src="../../data/sunny_day.jpg" title="sunny day" alt="sunny day" width="1024" height="614"
+        draggable="true">
+
+    <br>
+    <br>
+
+    <button onclick="changeWeather('sunny_day')"> Sunny Day </button>
+
+    <button onclick="changeWeather('rain')"> Rain </button>
+
+    <br>
+    <br>
+
+    <h2>JavaScript:</h2>
+
+    <div id="main" onmouseover="changeBackground('on')" onmouseout="changeBackground('off')">
+
+        <p class="para">
+            As a multi-paradigm language, JavaScript supports event-driven,
+            functional, and imperative (including object-oriented and prototype-based) programming styles. It has an
+            API
+            for working with text, arrays, dates, regular expressions, and basic manipulation of the DOM, but the
+            language
+            itself does not include any I/O, such as networking, storage, or graphics facilities, relying for these
+            upon
+            the host environment in which it is embedded.
+        </p>
+
+    </div>
+
+    <button onclick="moreJavaScript()"> Click here to read more about JavaScript </button>
+
+    <br>
+
+    <button onclick="lessJavaScript()"> Click here to remove additional JavaScript </button>
+
+    <br>
+    <br>
+
+    <div id="div_form">
+        <form name="user_form" id="user_form" class="grad_background" action="response.html" method="post" onsubmit="return validateResponse()">
+            <fieldset>
+                <!-- Fieldbox and legend elements -->
+                <legend> <Strong class="px">Please share your experience with us: &nbsp;</Strong> </legend>
+
+                <!-- One-line text box -->
+                <!-- Input elements go in here -->
+                <div class="row_form">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="">
+                </div>
+
+                <div class="row_form">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="">
+                </div>
+
+                <br>
+
+                <!-- Radio buttons -->
+                Enjoy so far&#63; <br>
+                <input type="radio" name="yes/no" value=""> Yes <br>
+                <input type="radio" name="yes/no" value=""> No
+
+                <br>
+                <br>
+
+                <!-- Drop-down list -->
+                Rate this site on a 1-10 scale:
+                <select required="true">
+                    <option value="">Choose an option</option>
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                </select>
+
+                <br>
+                <br>
+
+                <!-- Date and number box -->
+                Enter the day of submission:
+                <input type="date" name="day">
+
+                <br>
+                <br>
+
+                <!-- Multi-line text box -->
+                Comments: <br>
+                <!-- <label for="feedback">Feedback:</label> -->
+                <textarea id="comment" name="comment" form="user_form" rows="10" cols="80"></textarea>
+
+                <br>
+
+                <input type="submit" value="Submit">
+
+            </fieldset>
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Load the page first before downloading the JavaScript file -->
+    <!-- Assure the document has been created before any JavaScript code gets executed. -->
+    <script src="script.js"> </script>
 </body>
 
 </html>

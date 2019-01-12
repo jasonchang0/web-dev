@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <!-- Loading CSS files for JQuery UI -->
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.theme.css">
+    
+    <title>JQuery</title>
+</head>
+
+<body>
+    <div id="left" class="grad_background">
+        <h2>Left Content Area</h2>
+        <p>This area will contain the left content area.
+            We will populate this area with images and text. </p>
+    </div>
+
+    <div id="center" class="grad_background">
+        <h2>Center Content Area</h2>
+        <p>This area will contain the center content area.
+            This area will contain the main articles. </p>
+    </div>
+
+    <div id="right" class="grad_background">
+        <h2>Right Content Area</h2>
+        <p>This area will contain the right content area.
+            We will populate this area with links and text.</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="list" class="grad_background">
+        <ul>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Ruby</li>
+            <li>PHP</li>
+            <li class="add_list">ASP</li>
+            <li class="add_list">CSS</li>
+            <li class="add_list">HTML</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="sub">
+        <h1> No submissions are made. </h1>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="div_img">
+        <img id="img" src="../../data/rain.jpg">
+
+        <br>
+
+        <button id="slide_up"> Slide image up </button>
+        <button id="slide_down"> Slide image down </button>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="test">
+        <button id="button"> Button to make change happen </button>
+    </div>
+
+    <script src="jquery-3.3.1.js"> </script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                // JQuery can use CSS selectors
+                $("#right, #center").hide();
+                // $("div:not(#left, #list, #test)").hide();
+
+                $("#test:has(button)").hide();
+
+                // ul li is 1-indexed
+                $("ul li:nth-child(1)").hide();
+
+                // .css("property", "value")
+                // $("#left").css({ "background": "linear-gradient(60deg, rgba(78, 42, 132, 1.0), green, rgba(253, 181, 21, 0.70))", "color": "#FDB515" });
+
+                // Methods can be chained as well
+                $("#left").css("background", "linear-gradient(60deg, rgba(78, 42, 132, 1.0), green, rgba(253, 181, 21, 0.70))").css("color", "#FDB515").fadeOut(1000).fadeIn(1000).fadeTo(1000, 0.5);
+
+                /* Append, Prepend, Before, After methods are similar to html/text but only add contents and do not substitute. */
+                $("#sub").html("<p> Submission has been made. </p>").addClass("grad_background");
+
+                // toggleClass switches between addClass and removeClass
+                // $("#sub").toggleClass("grad_background");
+
+                // fadeToggle switches between fadeIn and fadeOut
+                // $("#left").fadeToggle(2500);
+
+                // .attr("attribute", "value"), .removeAttr("attribute", "value")
+                $("#img").attr("src", "../../data/sunny_day.jpg");
+
+                $("li").each(function () {
+                    if ($(this).text() == "Python") {
+                        $(this).html("<li> Python Flask </li>");
+                    }
+                });
+            });
+
+            // $("#list").mouseover(function () {
+            //     $("#list ul").append("<li>ASP</li> <li>CSS</li><li>HTML</li>").attr("id", "add_list");
+            // });
+
+            // $("#list").mouseout(function () {
+            //     $("#add_list").remove();
+            // });
+
+            // Hover toggles between mouseover and mouseout
+            $("#list").hover(
+                function () {
+                    // hovered over
+                    $(".add_list").show();
+                },
+                function () {
+                    // not hovered
+                    $(".add_list").hide();
+                });
+
+            // slideToggle switches between slideUp and slideDown
+            $("#slide_up").click(function () {
+                $("#img").slideUp();
+            });
+
+            $("#slide_down").click(function () {
+                $("#img").slideDown();
+            });
+        });
+
+        /* JQuery ready executes when HTML-Document is loaded and DOM is ready (earliest possible).
+
+        Load executes when complete page is fully loaded, including all frames, objects and images (later than ready).*/
+        // $("img").on("load", function () {
+        //     alert("All images have been loaded.");
+        // });
+    </script>
+    
+    <script src="../JQuery Library/jquery-ui/jquery-ui.js">
+        /*
+        What is JQuery UI? JQuery is the core library. JQuery UI is built on top of it. If you use the JQuery UI, you must also load JQuery beforehand. In other words, it is an additional JavaScript library.
+
+        What does JQuery UI provide?
+            - Interface
+            - Widgets
+            - Animation
+            - Effects
+            - Utilities
+            - Menus and Navigation Bars
+
+         */
+    </script>
+</body>
+
+</html>

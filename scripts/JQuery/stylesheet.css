@@ -1,0 +1,267 @@
+/* Collectively called the CSS rule */
+
+/* Type Selectors - select element by type */
+body {
+    /* Inheritance and overriding */
+    font-size: 16px;
+    font-family: sans-serif, Verdana, Geneva, Georgia, Arial, Arial;
+    font-weight: bold;
+    color: snow;
+    /* background-color: aliceblue; */
+    /* background-color: rgb(78, 42, 132); */
+    /* Background image property */
+    background-image: url(../../data/rain_background.gif);
+    /* margin: 0px; */
+}
+
+h1, h2, strong {
+    /* CSS property goes here */
+    /* border-bottom: 1px solid black; */
+    /* text-decoration: underline; */
+    /* text-shadow: Horizontal Vertical Blur Color*/
+    text-shadow: 3px 3px 5px rgba(253, 181, 21, 0.75), 6px 6px 10px rgba(59, 126, 161, 0.3);
+}
+
+h1 {
+    /* font-size = 16px * 200% */
+    font-size: 250%;
+    /* background-color: aqua; */
+}
+
+/* Combine Selectors */
+h2, strong {
+    /* font-size = 16px * 120% */
+    font-size: 1.3em;
+}
+
+p, .px {
+    /* color: blue; */
+    /* Font size measured in pixels (px) */
+    /* font-size = 16px * 110% */
+    font-size: 110%;
+}
+
+/* Class Selector - select element with . */
+.underline {
+    text-decoration: underline;
+    /* Inherits font-size = 16px */
+}
+
+.em {
+    font-style: oblique;
+    /* font-size = 16px * 120% */
+    font-size: 1.2em;
+}
+
+.space {
+    /* Specifying line spacing */
+    line-height: 1.75em;
+}
+
+.light_background, .dark_background, .grad_background {
+    display: inline-block;
+    /* Padding: N E S W */
+    padding: 3px 3px 3px 3px;
+    /* Border Property */
+    /* Equivalent to border: white 3px solid; */
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+}
+
+.dark_background {
+    /* CSS Box Model: Margin >> Border >> Padding >> Content */
+    background-color: #4E2A84;
+    color: #FDB515;
+    box-shadow: 2px 2px 10px 2px white;
+}
+
+.light_background {
+    /* CSS Box Model: Margin >> Border >> Padding >> Content */
+    background-color: #FDB515;
+    color: #003262;
+    /* box-shadow: Horizontal Vertical Blur Spread_Radius */
+    box-shadow: 2px 2px 10px 2px #003262;
+}
+
+.grad_background {
+    background: linear-gradient(60deg,  rgba(253, 181, 21, 1.0), rgba(238, 50, 78, 0.8));
+    color: white;
+    box-shadow: inset 2px 2px 15px #4E2A84, 1px 1px 5px 1px #4E2A84;
+}
+
+.indent_left {
+    padding: 2em;
+    margin-left: 2px;
+}
+
+.indent_right {
+    margin-right: 640px;
+}
+
+.float_right {
+    float: right;
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.float_left {
+    float: left;
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+/* The ID attribute */
+
+.center_video_audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qcenter_image {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+}
+
+.center_text {
+    /* 
+        text-align property:
+            text-align: center;
+            text-align: right;
+            text-align: left;
+    */
+    text-align: center;
+}
+
+.div_img {
+    text-align: center;
+    display: block;
+    background-color: #4E2A84;
+    box-shadow: 2px 2px 10px 2px white;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    border-width: 3px;
+    border-style: ridge;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    opacity: 0.70;
+}
+
+.div_img:hover {
+    opacity: 1.0;
+}
+
+.div_logo {
+    /* Absolutely hovers over the default FLOW
+    -> static positioning 
+    
+    Static - default, equivalent to the FLOW
+    ===========================================
+    Relative - Position determined by the first
+    STATIC element (top, bottom, left, right)
+    ===========================================
+    Absolute - Position determined by the first
+    NON-STATIC element (top, bottom, left, right)
+    */
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 150px;
+    height: 150px;
+    border-color: gray;
+    border-width: 5px;
+    border-style: ridge;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    box-shadow: 2px 2px 10px 2px snow;
+}
+
+.red_highlight {
+    color: red;
+}
+
+.green_highlight {
+    color: green;
+}
+
+.drag {
+    cursor: move;
+}
+
+/* Special effects are instantiated with 
+pseudo-classes -> states of the object, 
+no need to be declared in HTML 
+(Keep in the same order) */
+
+a:link {
+    color: #003262;
+}
+
+a:visited {
+    color: #3B7EA1;
+}
+
+a:hover {
+    color: #FDB515;
+    /* Cursor property */
+    cursor: url("../data/link_icon.png"), crosshair;
+}
+
+.button {
+    background: #003262;
+    /* 25 + 8 * 2 */
+    height: 41px;
+    border-color: #FDB515;
+    border-width: 2px;
+    border-style: ridge;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 40px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px 1px #FDB515;
+
+}
+
+#div_form {
+    display: table;
+}

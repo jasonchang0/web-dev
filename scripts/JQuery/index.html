@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.structure.css">
     <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.theme.css">
-    
+
     <title>JQuery</title>
 </head>
 
@@ -55,18 +55,62 @@
 
     <div id="sub">
         <h1> No submissions are made. </h1>
+
+        <p>Date of the event: <input type="text" id="pick_date"></p>
     </div>
 
     <br>
     <br>
 
     <div id="div_img">
-        <img id="img" src="../../data/rain.jpg">
+        <img id="img" src="../../data/rain.jpg" title="Weather" alt="Weather">
 
         <br>
 
         <button id="slide_up"> Slide image up </button>
         <button id="slide_down"> Slide image down </button>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="panels" , class="grad_background">
+        <h2>Honda’s Advanced Step in Innovative Mobility (ASIMO) humanoid robot (2000)</h2>
+
+        <p>
+            Honda’s Advanced Step in Innovative Mobility (ASIMO) humanoid robot is introduced. It could walk 1 mph,
+            climb stairs and change its direction after detecting hazards. Using the camera mounted in its head, ASIMO
+            could also recognize faces, gestures and the movements of multiple objects. Additionally, ASIMO had
+            microphones that allowed it to react to voice commands. About 100 were built.
+        </p>
+
+        <h2>DARPA's Centibots project (2002)</h2>
+
+        <p>
+            The Centibots project, funded by the Defense Advanced Research Projects Agency (DARPA), sought to prove
+            that up to 100 robots could survey a potentially dangerous area, build a map in real time, and seek items
+            of interest. Centibots communicated with each other to coordinate their effort. If one robot failed,
+            another took over its task. The robots were completely autonomous, requiring no human supervision.
+        </p>
+
+        <h2>The Roomba is introduced (2002)</h2>
+
+        <p>
+            iRobot’s Roomba is introduced. Using a cleaning algorithm, the autonomous robotic vacuum cleaner could
+            clean a room while detecting and avoiding obstacles. Rodney Brooks, co-founder of iRobot, previously
+            performed research at MIT’s Mobile Robotics Lab. The research focused on using insect-like reflex behavior
+            instead of a central “brain” to create purposeful behavior.
+        </p>
+
+        <h2>CSAIL at MIT is formed (2003)</h2>
+
+        <p>
+            The Computer Science and Artificial Intelligence Laboratory (CSAIL) at MIT is formed with the merger of the
+            Laboratory for Computer Science and the Artificial Intelligence Laboratory. The AI lab was founded in 1959
+            by John McCarthy and Marvin Minsky and the Laboratory for Computer Science was opened in 1963 as Project
+            MAC.
+        </p>
+
     </div>
 
     <br>
@@ -141,6 +185,16 @@
             $("#slide_down").click(function () {
                 $("#img").slideDown();
             });
+
+            // JQuery UI datepicker widget
+            $("#pick_date").datepicker({ numberOfMonths: 1, changeMonth: true, changeYear: true, showWeek: true, weekHeader: "Week", showOtherMonths: true, minDate: new Date(1990, 0, 1), showButtonPanel: true, closeText: "Close Calendar" });
+
+            // JQuery UI tooltip widget
+            $("#img").tooltip({ track: true, show: { effect: "fadeIn", duration: 750 }, hide: { effect: "blind", duration: 750 } });
+
+            // JQuery UI accordion widget
+            // Icon gallery: https://api.jqueryui.com/theming/icons/
+            $("#panels").accordion({collapsible: true, animate: 500, heightStyle: "content", icons: {header: "ui-icon-circle-plus", activeHeader: "ui-icon-circle-minus"}});
         });
 
         /* JQuery ready executes when HTML-Document is loaded and DOM is ready (earliest possible).
@@ -150,7 +204,7 @@
         //     alert("All images have been loaded.");
         // });
     </script>
-    
+
     <script src="../JQuery Library/jquery-ui/jquery-ui.js">
         /*
         What is JQuery UI? JQuery is the core library. JQuery UI is built on top of it. If you use the JQuery UI, you must also load JQuery beforehand. In other words, it is an additional JavaScript library.

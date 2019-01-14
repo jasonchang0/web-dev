@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="layout_stylesheet.css">
+    <!-- Calling completely different external css stylesheet for media queries -->
+    <link rel="stylesheet" type="text/css" media="(max-width:400px)" href="layout_stylesheet_400.css" <meta charset="UTF-8">
+
+    <!-- Loading CSS files for JQuery UI -->
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="../JQuery Library/jquery-ui/jquery-ui.theme.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Philosophy on the Web</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <a name="Top"></a>
+
+        <div class="div_logo drag">
+            <img src="../../data/logo.png" title="Jason Chang Programming" alt="Jason Chang Programming" width="140"
+                height="140" draggable="true">
+        </div>
+
+        <div id="header">
+            <h3>Philosophy on the Web &nbsp;<em>by Jason Chang</em>&nbsp;</h3>
+        </div>
+
+        <div id="navbar">
+            <ul>
+                <li><a href="layout.html">Home</a></li>
+                <li><a href="#puzzles">Puzzles</a></li>
+                <li><a href="#paradoxes">Paradoxes</a></li>
+                <li><a href="">Solutions</a></li>
+                <li><a href="https://twitter.com/Jason_Chang_0">Social Media</a></li>
+            </ul>
+        </div>
+
+        <div class="sortable side_right">
+            <br>
+
+            <ul class="vertical_menu">
+                <h2>Puzzle Timeline</h2>
+                <li><em>&bull;&nbsp; Erwin Schrödinger (1935) &nbsp; — &nbsp; Schrödinger's Cat</em></li>
+                <li><em>&bull;&nbsp; James F. Thomson (1954)&nbsp; — &nbsp; Thomson's Lamp</em> </li>
+                <li><em>&bull;&nbsp; William Newcomb (1960) &nbsp; — &nbsp; Newcomb's Paradox</em></li>
+                <li><em>&bull;&nbsp; Raymond Smullyan (1978) &nbsp; — &nbsp; Knights and Knaves</em></li>
+            </ul>
+
+            <br>
+
+            <ul class="vertical_menu">
+                <h2>Paradox Timeline</h2>
+                <li><em>&bull;&nbsp; Gottlob Frege (1892)&nbsp; — &nbsp; Frege's Puzzles</em> </li>
+                <li><em>&bull;&nbsp; Plutarch (101 A.D.) &nbsp; — &nbsp; Parallel Lives</em></li>
+                <li><em>&bull;&nbsp; Derek Parfit (1984) &nbsp; — &nbsp; Teletransportation Paradox</em></li>
+            </ul>
+
+            <br>
+
+            <ul class="vertical_menu">
+                <h2>Other Relevant TImeline</h2>
+                <li><em>&bull;&nbsp; Bertrand Russell (1901) &nbsp; — &nbsp; Barber Paradox</em></li>
+                <li><em>&bull;&nbsp; Lewis Carroll (1895) &nbsp; — &nbsp; "What the Tortoise Said to Achilles"</em></li>
+                <li><em>&bull;&nbsp; Raymond Smullyan (1978) &nbsp; — &nbsp; The Drinking Principle</em></li>
+                <li><em>&bull;&nbsp; Henry E. Kyburg, Jr. (1961) &nbsp; — &nbsp; Lottery Paradox</em></li>
+                <li><em>&bull;&nbsp; Carl Gustav Hempel (1940) &nbsp; — &nbsp; Raven Paradox</em></li>
+                <li><em>&bull;&nbsp; John E. Littlewood (1953) &nbsp; — &nbsp; Balls and Vase Problem</em></li>
+            </ul>
+
+            <br>
+        </div>
+
+        <div class="side_right">
+            <form id="era">
+                <select id="optgroups" required="true">
+                    <option value="">More Philosophers</option>
+
+                    <optgroup label="Ancient Philosophy">
+                        <option value="Thales">Thales</option>
+                        <option value="Heraclitus">Heraclitus</option>
+                        <option value="Socrates">Socrates</option>
+                        <option value="Plato">Plato</option>
+                        <option value="Aristotle">Aristotle</option>
+                    </optgroup>
+
+                    <optgroup label="Medieval Philosophy">
+                        <option value="Saint Augustine
+                        ">Saint Augustine
+                        </option>
+                        <option value="Boethius">Boethius</option>
+                        <option value="Saint Anselm">Saint Anselm</option>
+                        <option value="Saint Thomas Aquinas">Saint Thomas Aquinas
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Modern Philosophy">
+                        <option value="Niccolò Machiavelli">Niccolò Machiavelli (1469–1527)</option>
+                        <option value="Saint Thomas More">Saint Thomas More (1478–1535)</option>
+                        <option value="Francis Bacon">Francis Bacon (1561–1626)
+                        </option>
+                        <option value="Immanuel Kant">Immanuel Kant (1724–1804)
+                        </option>
+                        <option value="Karl Marx">Karl Marx (1818–1883)</option>
+                    </optgroup>
+
+                    <optgroup label="Contemporary Philosophy">
+                        <option value="Charles Sanders Peirce">Charles Sanders Peirce (1839–1914)</option>
+                        <option value="Martin Heidegger">Martin Heidegger (1889–1976)</option>
+                        <option value="Jean-Paul Sartre">Jean-Paul Sartre (1905–1980)
+                        </option>
+                        <option value="Kurt Gödel">Kurt Gödel (1906–1978)
+                        </option>
+                        <option value="Alvin Goldman">Alvin Goldman (1938– )</option>
+                    </optgroup>
+                </select>
+
+                <div id="question">
+                    <p>
+                        Whose notion do you find most intriguing?
+                        <input id="textbox" type="text">
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="philosophy" class="side_img drag">
+            <img src="../../data/philosophy.jpg" draggable="true" width="440" height="479" title="philosophy" alt="philosophy">
+        </div>
+
+        <div class="main space">
+            <div id="puzzles" name="puzzles" class="main_container">
+                <h0>Puzzles</h0>
+
+                <ul>
+                    <li><a href="#island">On the Island of Knights and Knaves</a></li>
+
+                    <li><a href="#surprise">The Surprise Test</a></li>
+
+                    <li><a href="#switch">The Problem of the Light Switch</a></li>
+
+                    <li><a href="#bullet">The Super Bullet</a></li>
+
+                    <li><a href="#monkey">The Monkey</a></li>
+                </ul>
+
+                <div id="island">
+                    <p>
+                        On the island of Knights and Knaves, every inhabitant is either a knight or a knave. Knights
+                        always
+                        tell
+                        the
+                        truth. Knaves never tell the truth; any sentence uttered by a knave is false. A stranger came
+                        to
+                        the
+                        island
+                        and
+                        encountered three inhabitants, A, B, and C. He asked A, "Are you a knight, or a knave?" A
+                        mumbled
+                        an
+                        answer
+                        that the stranger could not understand. The stranger then asked B, "What did he say?" B
+                        replied, "A
+                        said
+                        that
+                        there is exactly one knight among us." Then C burst out, "Don't believe B, he is lying!" What
+                        are B
+                        and
+                        C?
+                    </p>
+
+                    <p>
+                        One day I went to the island of knights and knaves and encountered an inhabitant who said,
+                        "Either
+                        I am
+                        a
+                        knave
+                        or else two plus two equals five." What should you conclude?
+                        (Knights and Knaves puzzles by Raymond Smullyan)
+                    </p>
+
+                </div>
+
+                <div id="surprise">
+                    <p>
+                        One day the professor came into the class and announced, "Next week I will give you a surprise
+                        test. It
+                        will be
+                        a surprise, because you won't be able to figure out on which day it will occur until the class
+                        meets on
+                        the
+                        day
+                        of the test. It could happen on Monday, Tuesday, Wednesday, Thursday, or Friday, but I won't
+                        tell
+                        you
+                        which
+                        day."
+                    </p>
+
+                    <p>
+                        The class were clever. They reasoned as follows: "She can't give the test on Friday, because
+                        then
+                        it
+                        wouldn't
+                        be a surprise; we'd know after class on Thursday that the test hadn't yet occurred, and hence
+                        we'd
+                        figure
+                        out
+                        that it would have to be on Friday. So we know the test can't be on Friday. But then it can't
+                        be on
+                        Thursday
+                        either, because if it were, we would know after class on Wednesday that it would have to be on
+                        Thursday,
+                        since
+                        it wouldn't have happened yet, and we have already shown that it can't be on Friday." Reasoning
+                        in
+                        this
+                        manner,
+                        the students concluded that the test could not occur on Wednesday either, nor on Tuesday, nor
+                        on
+                        Monday.
+                        Having
+                        concluded that a surprise test was impossible, the students didn't study. They were very
+                        disappointed
+                        and
+                        very
+                        surprised on Wednesday when they got a test. Where did the students' reasoning go wrong?
+                    </p>
+
+                </div>
+
+                <div id="switch">
+                    <p>
+                        I have an ordinary light switch connected to a light. When the switch is closed, the light is
+                        on.
+                        When
+                        the
+                        switch is open, the light is off. At two minutes to noon, the light is on. At one minute to
+                        noon I
+                        flip
+                        the
+                        switch, turning the light off. At half a minute to noon I flip it again, turning the light on.
+                        At a
+                        quarter
+                        of a minute before noon I flip it again, turning the light off. I continue in this way, cutting
+                        the
+                        time
+                        between flippings of the switch in half each time. Now this will be an infinite series of
+                        flips.
+                        The
+                        switch
+                        flippings will occur closer and closer to noon, but will all be completed before noon. Will the
+                        switch
+                        be
+                        on or off at noon?
+                    </p>
+                </div>
+
+                <div id="bullet">
+                    <p>
+                        The Acme Arms Company has invented a Super Bullet: a Super Bullet penetrates anything it hits.
+                        But
+                        the
+                        Adamantine Armor company has invented a Super Strong Armor Plate: nothing that hits a Super
+                        Strong
+                        Armor
+                        Plate penetrates it. The army is planning to shoot a Super Bullet at a Super Strong Armor
+                        Plate.
+                        What
+                        will
+                        happen?
+                    </p>
+                </div>
+
+                <div id="monkey">
+                    <p>
+                        Hanging over a pulley there is a rope with a weight at one end; at the other end clings a
+                        monkey of
+                        equal
+                        weight. The rope weighs 4 ounces per foot. The sum of the ages of the monkey and its mother is
+                        eight
+                        years,
+                        and the weight of the monkey is as many pounds as its mother is years old. The mother is twice
+                        as old
+                        as
+                        the monkey was when the mother was half as old as the monkey will be when the monkey is three
+                        times as
+                        old
+                        as its mother was when she was three times as old as the monkey was. The weight of the rope and
+                        weight
+                        is
+                        half again as much as the difference between the weight of the weight and the weight plus the
+                        weight of
+                        the
+                        monkey. How long is the rope?
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div id="paradoxes" name="paradoxes" class="main_container">
+                <h0>Paradoxes</h0>
+
+                <ul>
+                    <li><a href="#sentence">The problem of the Two Sentences</a></li>
+
+                    <li><a href="#theseus">The Ship of Theseus</a></li>
+
+                    <li><a href="#transporter">The Malfunctioning Transporter</a></li>
+                </ul>
+
+                <div id="sentence">
+                    <p>
+                        Consider the first of the following sentences -- is it true or false?
+                    </p>
+
+                    <ol>
+                        <li>The sentence numbered 2) is true.</li>
+                        <li>The sentence numbered 1) is false.</li>
+                    </ol>
+                </div>
+
+                <div id="theseus">
+                    <p>
+                        Theseus has just bought himself a brand new wooden ship. He is a maintenance fanatic. Whenever
+                        some
+                        part of
+                        his ship gets a mark on it, he removes the part and replaces it with a new duplicate. Over many
+                        years,
+                        Theseus has eventually replaced every single original part with new wood. He is proud of how
+                        well
+                        he
+                        has
+                        kept up the condition of his ship.
+                    </p>
+
+                    <p>
+                        Xanthippe buys used ship parts for refurbishing and resale. Theseus has been a source of high
+                        quality
+                        material. Xanthippe has bought from him each part of his ship as he replaced them. As it
+                        happens,
+                        Xanthippe
+                        has not sold any of them. She realizes that the now has the parts of a whole wooden ship, and
+                        they
+                        all
+                        have
+                        just minor cosmetic flaws. Xanthippe cleans of the marks on the wood and re-assembles the parts
+                        into a
+                        ship, placing them back in their exact original arrangement.
+                    </p>
+
+                    <p>
+                        Does Theseus still own the ship that he purchased? If so, how does the ship that he purchased
+                        differ
+                        from
+                        the ship that Zanthippe now has? If not, when did Theseus stop owning the ship that he
+                        purchased?
+                    </p>
+                </div>
+
+                <div id="transporter">
+                    <p>
+                        You step into the Transporter on the Star Ship Enterprise to be transported down to the surface
+                        of
+                        the
+                        planet Duplo. However, while you are being transported, an unfortunate energy surge occurs,
+                        with
+                        surprising
+                        results. Two copies of you materialize on the planet's surface instead of one. Each is a
+                        molecule-for-molecule duplicate of you as you were when the transporting process began. Each of
+                        the
+                        duplicates claims to be you, but they can't both be right. For if each is identical to you,
+                        they
+                        are
+                        identical to each other, because things identical to the same thing are identical to each
+                        other.
+                        But
+                        these
+                        two duplicates are obviously not identical: they are two distinct people. On the other hand, it
+                        is
+                        very
+                        difficult to think of any basis for saying that one of them is you and the other isn't, for any
+                        relation to
+                        your earlier self that the one has the other has as well. Of course, you could say that neither
+                        one
+                        is
+                        you,
+                        but why? Each of them has as much claim to be you as you have after any other transporter
+                        journey.
+                        What
+                        has
+                        happened to you?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="box">
+            <p> "The unexamined life is not worth living" – Socrates </p>
+
+            <img id="socrates" class="drag" src="../../data/socrates.jpg" draggable="true" title="socrates" alt="socrates">
+        </div>
+
+        <div id="footer">
+            <ul>
+                <li><a href="#Top">Back to Top</a></li>
+                <li><a href="">About Author</a></li>
+                <li><a href="">Help</a></li>
+                <li><a href="mailto: 0.jasonchang@gmail.com">Contact Us</a></li>
+            </ul>
+
+            <p>&copy; 2019 Philosophyontheweb.com. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+    <script src="jquery-3.3.1.js"> </script>
+
+    <script src="../JQuery Library/jquery-ui/jquery-ui.js">
+        /*
+        What is JQuery UI? JQuery is the core library. JQuery UI is built on top of it. If you use the JQuery UI, you must also load JQuery beforehand. In other words, it is an additional JavaScript library.
+
+        What does JQuery UI provide?
+            - Interface
+            - Widgets
+            - Animation
+            - Effects
+            - Utilities
+            - Menus and Navigation Bars
+
+         */
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // JQuery UI Vertical Menu
+            $(".vertical_menu").menu({ menus: "div" });
+
+            // JQuery UI Message Box
+            $("#box").dialog({ title: "Socrates", autoOpen: true, resizable: false, width: 310, height: 470, show: { effect: "fadeIn", duration: 750 }, hide: { effect: "blind", duration: 750 }, closeOnEscape: false });
+
+            // JQuery UI Tabs Widget
+            $(".main_container").tabs({ heightStyle: "content" });
+
+            // JQuery UI Draggable
+            $("#philosophy").draggable({ grid: [30, 30], containment: "parent", cursor: "move", delay: "350", revert: true });
+
+            // JQuery UI Sortable
+            $(".sortable").sortable({ opacity: 0.5, containment: "parent", cursor: "move", delay: "350", axis: "y" });
+
+            // JQuery UI Resizable
+            $("#socrates").resizable({ maxWidth: 287, maxHeight: 300, autoHide: true, aspectRatio: true, animateDuration: "medium", ghost: true, helper: "ui-resizable-helper" });
+
+            // JQuery UI Select Menu
+            $("#optgroups").selectmenu({ width: 398, icons: { button: "ui-icon-info" } });
+
+            // JQuery UI Autocomplete
+            $("#textbox").autocomplete({ autoFocus: true, minLength: 1, source: ["Thales", "Heraclitus", "Empedocles", "Zeno", "Anaxagoras", "Leucippus", "Democritus", "Socrates", "Plato", "Aristotle", "Diogenes", "Epicurus", "Saint Augustine", "Boethius", "Saint Anselm", "Saint Thomas Aquinas", "Niccolò Machiavelli (1469–1527)", "Saint Thomas More (1478–1535)", "Francis Bacon (1561–1626)", "Thomas Hobbes (1588–1679)", "René Descartes (1596–1650)", "Blaise Pascal (1623–1662)", "Baruch Spinoza (1632–1677)", "John Locke (1632–1704)", "Nicolas Malebranche (1638–1715)", "Christian Wolff (1679–1754)", "George Berkeley (1685–1753)", "Thomas Reid (1710–1796)", "David Hume (1711–1776)", "Jean-Jacques Rousseau (1712–1778)", "Baron d’Holbach (1723–1789)", "Immanuel Kant (1724–1804)", "Jeremy Bentham (1748–1832)", "G. W. F. Hegel (1770–1831)", "James Mill (1773–1836)", "Bernard Bolzano (1781–1848)", "Arthur Schopenhauer (1788–1860)", "Ralph Waldo Emerson (1803–1882)", "John Stuart Mill (1806–1873)", "Søren Kierkegaard (1813–1855)", "Karl Marx (1818–1883)", "Henry David Thoreau (1817–1862)", "Leo Tolstoy (1828–1910)", "Charles Sanders Peirce (1839–1914)", "Friedrich Nietzsche (1844–1900)", "Gottlob Frege (1848–1925)", "Alexius Meinong (1853–1920)", "Giuseppe Peano (1858–1932)", "Edmund Husserl (1859–1938)", "Henri Bergson (1859–1941)", "Alfred North Whitehead (1861–1947)", "Bertrand Russell (1872–1970)", "Henry M. Sheffer (1882–1964)", "Franz Kafka (1883–1924)", "Karl Jaspers (1883–1969)", "Ludwig Wittgenstein (1889–1951)", "Gabriel Marcel (1889–1973)", "Martin Heidegger (1889–1976)", "Rudolf Carnap (1891–1970)", "Gilbert Ryle (1900–1976)", "Alfred Tarski (1901–1983)", "Karl Popper (1902–1994)", "Jean-Paul Sartre (1905–1980)", "Kurt Gödel (1906–1978)", "Simone de Beauvoir (1908–1986)", "W. V. O. Quine (1908–2000)", "Albert Camus (1913–1960)", "John Rawls (1921–2002)", "Thomas Kuhn (1922–1996)", "Hilary Putnam (1926— )", "Edmund Gettier (1927— )", "Jürgen Habermas (1929– )", "Harry Frankfurt (1929— )", "Jaakko Hintikka (1929— )", "Jacques Derrida (1930–2004)", "Carl Ginet (1932— )", "Alvin Plantinga (1932– )", "John Searle (1932—)", "Thomas Nagel (1937— )", "Robert Nozick (1938–2002)", "Alvin Goldman (1938– )", "Saul Kripke (1940— )", "Frank Jackson (1943— )", "Jonathan Dancy (1946— )", "Peter Singer (1946— )", "David Chalmers (1966— )"] });
+        })
+    </script>
+</body>
+
+</html>
